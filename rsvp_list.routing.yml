@@ -1,0 +1,31 @@
+# rsvp_list.form: is name of route
+#   path: '/rsvplist' Is Urp path of this route
+# defaults:
+#   _form: '\Drupal\rsvp_list\Form\RsvpForm' is destination to form file
+#   _title: 'RSVP to this event'  title for form, will be displayed in html
+# requirements:
+#   _permission: 'view rsvp_list' Name of permision in {module}.permissions.yml file
+#
+rsvp_list.form:
+  path: '/rsvplist'
+  defaults:
+    _form: '\Drupal\rsvp_list\Form\RsvpForm'
+    _title: 'RSVP to this event'
+  requirements:
+    _permission: 'view rsvp_list'
+
+rsvp_list.admin_settings:
+  path: '/admin/config/content/rsvplist'
+  defaults:
+    _form: '\Drupal\rsvp_list\Form\RsvpSettingsForm'
+    _title: 'Rsvp List Settings'
+  requirements:
+    _permission: 'administer rsvp_list'
+
+rsvp_list.report:
+  path: '/admin/reports/rsvplist'
+  defaults:
+    _controller: '\Drupal\rsvp_list\Controller\RsvpListController::Report'
+    _title: 'List of RSVPs'
+  requirements:
+    _permission: 'view rsvp_list'

@@ -1,0 +1,13 @@
+# This file will e displayed in people/permissions tab in your site
+view rsvp_list:
+  title: 'View RSVP form'
+  description: 'View and submit RSVP form'
+
+access rsvp_list report:
+  title: 'Access list of RSVPs'
+  description: 'View the report listing all RSVPs submitted'
+
+administer rsvp_list:
+  title: 'Administer RSVP setting'
+  description: 'Access RSVP administration page'
+  restrict access: true
